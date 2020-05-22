@@ -11,15 +11,15 @@ $(document).ready(function(){
         // If the cookie is empty or set to no, then add highcontrast
         if ($.cookie('highcontrast') == "undefined" || $.cookie('highcontrast') == "no") {
             // Set cookie value to yes
-            $.cookie('highcontrast','yes', {expires: 7, path: '/'});
+            $.cookie('highcontrast','yes', {expires: 14, path: '/'});
             // Add the class to the body
             $("body").addClass("highcontrast");
             $("body").removeClass("easycontrast");
-
+4
         }
         // If the cookie was already set to yes then remove it
         else {
-            $.cookie('highcontrast','no',  {expires: 7, path: '/'});
+            $.cookie('highcontrast','no',  {expires: 14, path: '/'});
             $("body").removeClass("highcontrast");
             $("body").addClass("easycontrast");
         }
